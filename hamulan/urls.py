@@ -22,7 +22,7 @@ from polls import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',hi.views.home,name='home'),
+    path('hi/',include(('hi.urls','hi'),namespace='hi')),
     path('polls/',include(('polls.urls','polls'),namespace='polls'))
     #path('polls/',views.index,name='index'),
     #path('polls/<int:question_id>/', views.detail, name='detail'),
